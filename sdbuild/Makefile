@@ -145,6 +145,10 @@ $$(PL_PROJ_$1): $$(BSP_TARGET_$1)
 	echo 'CONFIG_SUBSYSTEM_ROOTFS_EXT4=y' >> $$(PL_CONFIG_$1)
 	echo 'CONFIG_SUBSYSTEM_SDROOT_DEV="/dev/mmcblk0p2"' >> $$(PL_CONFIG_$1)
 	echo 'CONFIG_SUBSYSTEM_ETHERNET_MANUAL_SELECT=y' >> $$(PL_CONFIG_$1)
+	echo 'CONFIG_PRE_MIRROR_URL="file:///opt/sstate/downloads"' >> $$(PL_CONFIG_$1)
+	echo 'CONFIG_YOCTO_LOCAL_SSTATE_FEEDS_URL="/opt/sstate/sstate-cache/aarch64"' >> $$(PL_CONFIG_$1)
+	echo 'CONFIG_YOCTO_NETWORK_SSTATE_FEEDS=y' >> $$(PL_CONFIG_$1)
+	echo 'CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="file:///opt/sstate/sstate-cache/aarch64"' >> $$(PL_CONFIG_$1)
 	if [ $$(FPGA_MANAGER_$1) = 1 ]; then \
 		echo 'CONFIG_SUBSYSTEM_DEVICETREE_FLAGS="-@"' >> $$(PL_CONFIG_$1) ;\
 		echo 'CONFIG_SUBSYSTEM_DTB_OVERLAY=y' >> $$(PL_CONFIG_$1) ;\
