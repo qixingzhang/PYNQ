@@ -3,6 +3,6 @@
 
 ARCH_Pynq-ZU := aarch64
 BSP_Pynq-ZU := 
-BITSTREAM_Pynq-ZU := cdcm6208_config.bit
+BITSTREAM_Pynq-ZU := system.bit
 
 STAGE4_PACKAGES_Pynq-ZU := usbgadget usb-eth0 wilc3000

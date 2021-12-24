@@ -3,6 +3,5 @@
 
 SRC_URI += "file://bsp.cfg"
 SRC_URI += "file://fix_pwrseq_simple.patch"
-SRC_URI += "file://ad9361-driver.patch"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
